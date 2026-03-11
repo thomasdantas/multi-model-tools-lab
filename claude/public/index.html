@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Clima</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Painel de Clima</h1>
+
+    <form id="search-form">
+      <input type="text" id="city-input" placeholder="Digite uma cidade..." autocomplete="off">
+      <button type="submit">Buscar</button>
+      <button type="button" id="geo-btn" title="Usar minha localização">📍</button>
+    </form>
+
+    <p id="status"></p>
+
+    <div id="weather-card" class="hidden">
+      <div class="location">
+        <h2 id="location-name"></h2>
+        <p id="timezone"></p>
+      </div>
+
+      <div class="main-info">
+        <span id="weather-icon" class="icon"></span>
+        <span id="temperature" class="temp"></span>
+      </div>
+
+      <p id="weather-description"></p>
+
+      <div class="details">
+        <div class="detail">
+          <span class="label">Sensação</span>
+          <span id="feels-like" class="value"></span>
+        </div>
+        <div class="detail">
+          <span class="label">Umidade</span>
+          <span id="humidity" class="value"></span>
+        </div>
+        <div class="detail">
+          <span class="label">Vento</span>
+          <span id="wind" class="value"></span>
+        </div>
+        <div class="detail">
+          <span class="label">Precipitação</span>
+          <span id="precipitation" class="value"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

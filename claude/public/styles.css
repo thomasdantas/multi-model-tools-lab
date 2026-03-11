@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+#search-form {
+  display: flex;
+  gap: 8px;
+}
+
+#city-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+#city-input::placeholder {
+  color: #aaa;
+}
+
+#city-input:focus {
+  border-color: #7c6df0;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+#search-form button[type="submit"] {
+  background: #7c6df0;
+  color: #fff;
+}
+
+#search-form button[type="submit"]:hover {
+  background: #6a5bd6;
+}
+
+#geo-btn {
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 1.2rem;
+  padding: 10px 12px;
+}
+
+#geo-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#status {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: #ccc;
+  min-height: 1.2em;
+}
+
+#weather-card {
+  margin-top: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(8px);
+}
+
+#weather-card.hidden {
+  display: none;
+}
+
+.location h2 {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.location p {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+.main-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0 8px;
+}
+
+.icon {
+  font-size: 3rem;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+#weather-description {
+  text-align: center;
+  color: #bbb;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.detail {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+.detail .label {
+  display: block;
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail .value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
