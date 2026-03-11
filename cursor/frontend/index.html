@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel de Clima</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <header class="header">
+        <h1>Painel de Clima</h1>
+        <p class="subtitle">Consulte o clima atual de qualquer cidade</p>
+      </header>
+
+      <section class="search-section">
+        <div class="search-box">
+          <input
+            type="text"
+            id="cityInput"
+            placeholder="Digite o nome da cidade..."
+            autocomplete="off"
+          />
+          <button type="button" id="searchBtn" aria-label="Buscar clima">
+            Buscar
+          </button>
+        </div>
+        <button type="button" id="locationBtn" class="location-btn">
+          Usar minha localização
+        </button>
+      </section>
+
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <span>Buscando dados do clima...</span>
+      </div>
+
+      <div id="error" class="error hidden"></div>
+
+      <section id="weatherCard" class="weather-card hidden">
+        <h2 class="location-name" id="locationName"></h2>
+        <div class="weather-main">
+          <span class="weather-icon" id="weatherIcon"></span>
+          <div class="temp-block">
+            <span class="temperature" id="temperature"></span>
+            <span class="weather-desc" id="weatherDesc"></span>
+          </div>
+        </div>
+        <div class="weather-details">
+          <div class="detail">
+            <span class="detail-label">Umidade</span>
+            <span class="detail-value" id="humidity"></span>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Vento</span>
+            <span class="detail-value" id="wind"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
