@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel">
+        <p class="eyebrow">Open-Meteo via backend</p>
+        <h1>Current weather</h1>
+        <p class="intro">
+          Search for a city and view live weather conditions. The browser talks only to the local backend.
+        </p>
+
+        <form id="weather-form" class="search-form">
+          <label class="search-label" for="city-input">City</label>
+          <div class="search-row">
+            <input id="city-input" name="city" type="text" placeholder="e.g. Sao Paulo" autocomplete="off" required />
+            <button type="submit">Search</button>
+          </div>
+        </form>
+
+        <button id="location-button" class="secondary-button" type="button">Use my location</button>
+
+        <p id="status" class="status" aria-live="polite"></p>
+
+        <section id="weather-card" class="weather-card hidden" aria-live="polite">
+          <div class="weather-header">
+            <div>
+              <p id="location-name" class="location-name"></p>
+              <p id="weather-description" class="weather-description"></p>
+            </div>
+            <p id="temperature" class="temperature"></p>
+          </div>
+
+          <dl class="weather-metrics">
+            <div>
+              <dt>Feels like</dt>
+              <dd id="apparent-temperature"></dd>
+            </div>
+            <div>
+              <dt>Humidity</dt>
+              <dd id="humidity"></dd>
+            </div>
+            <div>
+              <dt>Wind</dt>
+              <dd id="wind-speed"></dd>
+            </div>
+            <div>
+              <dt>Precipitation</dt>
+              <dd id="precipitation"></dd>
+            </div>
+            <div>
+              <dt>Time zone</dt>
+              <dd id="timezone"></dd>
+            </div>
+            <div>
+              <dt>Observed at</dt>
+              <dd id="observed-at"></dd>
+            </div>
+          </dl>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+  </html>
