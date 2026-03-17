@@ -1,16 +1,15 @@
-
 Logging
 
-Utilize a biblioteca winston para logging
+Use the `winston` library for logging.
 
-Utilize adequadamente os níveis DEBUG e ERROR para registrar logs que sejam úteis apenas para entender o que aconteceu ou error que precisam ser analisados
+Use the `DEBUG` and `ERROR` levels appropriately to record logs that are useful for understanding what happened or errors that need to be investigated.
 
-Nunca armazene logs em arquivos, sempre redirecione pelo próprio processo
+Never store logs in files. Always redirect them through the process itself.
 
-Nunca registre dados sensíveis como nome, endereço e cartão de crédito de pessoas
+Never log sensitive data such as names, addresses, or people's credit card information.
 
-Seja sempre claro nas mensagens de log, sem exagerar ou utilizar textos longos
+Always keep log messages clear, without overdoing them or using long texts.
 
-Não utilize console.log ou console.error para registrar os logs
+Do not use `console.log` or `console.error` for logging.
 
-Nunca silencie exceptions, sempre registre os logs
+Never silence exceptions. Always log them.

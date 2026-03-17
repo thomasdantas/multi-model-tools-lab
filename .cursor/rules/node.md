@@ -1,30 +1,29 @@
-
 Node.js/JavaScript/TypeScript
 
-Todo o código-fonte deve ser escrito em TypeScript
+All source code must be written in TypeScript.
 
-Utilize yarn como ferramenta padrão para gerenciar dependências e executar scripts
+Use `yarn` as the standard tool to manage dependencies and run scripts.
 
-Se necessário, faça a instalação dos types das bibliotecas, por exemplo: jest e @types/jest
+If necessary, install type packages for libraries, for example: `jest` and `@types/jest`.
 
-Antes de terminar uma tarefa, sempre valide de a tipagem está correta
+Before finishing a task, always validate that the typing is correct.
 
-Utilize const ao invés de let onde for possível
+Use `const` instead of `let` whenever possible.
 
-Nunca utilize var para declarar uma variável
+Never use `var` to declare a variable.
 
-Sempre declare as propriedades da classe como private ou readonly, evitando o uso de public
+Always declare class properties as `private` or `readonly`, avoiding the use of `public`.
 
-Prefira o uso de find, filter, map e reduce ao invés de for e while
+Prefer using `find`, `filter`, `map`, and `reduce` instead of `for` and `while`.
 
-Sempre utilize async/await para lidar com promises, evite o uso de callbacks
+Always use `async/await` to handle promises. Avoid using callbacks.
 
-Nunca utilize any, sempre utilize types existentes ou crie types para tudo que for implementado
+Never use `any`. Always use existing types or create types for everything being implemented.
 
-Nunca utilize require para importar módulos, sempre utilize import
+Never use `require` to import modules. Always use `import`.
 
-Nunca utilize module.exports para exportar módulos, sempre export
+Never use `module.exports` to export modules. Always use `export`.
 
-Se o arquivo tiver apenas uma coisa sendo exportada, utilize default, senão named exports
+If a file exports only one thing, use a default export. Otherwise, use named exports.
 
-Evite dependência circular
+Avoid circular dependencies.

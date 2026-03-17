@@ -1,34 +1,33 @@
+Testing
 
-Testes
+Use the `jest` library to define test scenarios and expectations, and `sinon` to implement test patterns such as stubs, spies, and mocks.
 
-Utilize a biblioteca jest para determinar os cenários de teste e as expectativas e sinon para implementar test patterns como stub, spy e mock
+To run the tests, use the command `yarn test`.
 
-Para rodar os testes, utilize o comando yarn test
+All tests must live inside the `/test` folder. Do not place tests inside `/src` alongside the files being tested.
 
-Todos os testes devem ficar dentro da pasta /test, não coloque os testes na pasta /src, junto com os arquivos que estão sendo testados
+Tests must use the `.test.ts` extension.
 
-Os testes devem ter a extensão .test.ts
+Do not create dependencies between tests. It must be possible to run each test independently.
 
-Não crie dependência entre os testes, deve ser possível rodar cada um deles de forma independente
+Follow the Arrange, Act, Assert or Given, When, Then principle to keep tests organized and readable.
 
-Siga o princípio Arrange, Act, Assert ou Given, When, Then para garantir o máximo de organização e legibilidade dentro dos testes
+If you are testing behavior that depends on a `Date`, and that dependency is important to the behavior under test, use a mock to ensure the test is repeatable.
 
-Se estiver testando algum comportamento que depende de um Date, e isso for importante para o que estiver sendo testado, utilize um Mock para garantir que o teste seja repetível
+If a test depends on external resources such as HTTP requests, databases, messaging systems, the file system, or external APIs, it must go in `/test/integration`. Otherwise, it can go in `/test/unit`.
 
-Se um teste depender de recursos externos como requisições HTTP, banco de dados, mensageria, sistema de arquivos ou API devem ficar na pasta /test/integration, caso contrário podem ficar na pasta /test/unit
+Create tests for HTTP endpoints. These tests must not use libraries such as `supertest` and must be integration tests. Also, create these tests only to validate the main and alternative flows, focusing primarily on status codes and error messages, while leaving business-rule variations to the use case tests.
 
-Crie testes para os endpoints HTTP, esses testes não devem utilizar bibliotecas como supertest e devem ser de integração. Além disso, crie esses testes somente para garantir o funcionamento do fluxo principal e alternativo (explorando principalmente os status code e a mensagem de erro), deixando a variação de testes de regras de negócio para os testes sobre os use cases
+Create tests for all use cases. In these tests, always cover the main flow and at least one alternative flow that throws exceptions. Use the stub pattern to avoid calling external APIs at this test level.
 
-Crie testes para todos os use cases, nesse caso, teste sempre os fluxos principais e pelo menos um fluxo alternativo, que lance exceptions. Utilize o test pattern stub para evitar utilizar APIs externas nesse nível de teste.
+Create tests for the entire domain layer. Test every rule possibility and all possible variations, always at the unit level and without depending on any external resources.
 
-Crie testes para todos o domain, teste todas as possibilidades de regras, todas as variações possíveis, sempre no nível de unidade, sem depender de nenhum recurso externo
+Focus on testing one behavior per test. Avoid writing very large tests.
 
-Foque em testar um comportamento por teste, evite escrever testes muito grandes
+Ensure the code being written is fully covered by tests.
 
-Garanta que o código que está sendo escrito esteja totalmente coberto por testes
+Create consistent expectations, ensuring that everything under test is actually being verified.
 
-Crie expectativas consistentes, garantindo que tudo que estiver sendo testado está de fato sendo conferido
+Always close connections to databases or messaging platforms after running the tests.
 
-Sempre encerre conexões com o banco de dados ou plataformas de mensageria depois de executar os testes
-
-Utilize beforeEach para inicializar
+Use `beforeEach` for initialization.

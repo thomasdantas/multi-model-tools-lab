@@ -1,31 +1,31 @@
-Padrões de Codificação
+Coding Standards
 
-Todo o código-fonte deve ser escrito e em inglês
+All source code must be written in English.
 
-Utilize camelCase para a declaração de métodos, funções e variáveis, PascalCase para classes e interfaces e kebab-case para arquivos e diretórios
+Use `camelCase` for methods, functions, and variables, `PascalCase` for classes and interfaces, and `kebab-case` for files and directories.
 
-Evite abreviações, mas também não escreva nomes muito longos (com mais de 30 caracteres)
+Avoid abbreviations, but also do not write names that are too long (more than 30 characters).
 
-Declare constantes para representar magic numbers com legibilidade
+Declare constants for magic numbers to improve readability.
 
-Os métodos e funções devem executar uma ação clara e bem definida, e isso deve ser refletido no seu nome, que deve começar por um verbo, nunca um substantivo
+Methods and functions must perform a clear, well-defined action, and that must be reflected in their name, which should start with a verb, never a noun.
 
-Sempre que possível, evite passar mais de 3 parâmetros, dê preferência para o uso de objetos caso necessário
+Whenever possible, avoid passing more than 3 parameters. Prefer using objects when necessary.
 
-Evite efeitos colaterais, em geral um método ou função deve fazer uma mutação ou consulta, nunca permita que uma consulta tenha efeitos colaterais
+Avoid side effects. In general, a method or function should either perform a mutation or a query; never allow a query to have side effects.
 
-Nunca faça o aninhamento de mais de dois if/else, sempre dê preferência por early returns
+Never nest more than two `if/else` blocks. Always prefer early returns.
 
-Nunca utilize flag params para chavear o comportamento de métodos e funções, nesses casos faça a extração para métodos e funções com comportamentos específicos
+Never use flag parameters to switch the behavior of methods and functions. In those cases, extract the logic into methods and functions with specific behaviors.
 
-Evite métodos longos, com mais de 50 linhas
+Avoid long methods, especially those over 50 lines.
 
-Evite classes longas, com mais de 300 linhas
+Avoid long classes, especially those over 300 lines.
 
-Evite linhas em branco dentro de métodos e funções
+Avoid blank lines inside methods and functions.
 
-Evite o uso de comentários sempre que possível
+Avoid using comments whenever possible.
 
-Nunca declare mais de uma variável na mesma linha
+Never declare more than one variable on the same line.
 
-Declare as variáveis o mais próximo possível de onde serão utilizadas
+Declare variables as close as possible to where they will be used.

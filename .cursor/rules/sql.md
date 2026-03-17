@@ -1,40 +1,39 @@
+SQL/Database
 
-SQL/Banco de Dados
+Use `pg-promise` to connect to the database.
 
-Utilize pg-promise para se conectar no banco de dados
+Always use table and column names in English, pluralized, and in `snake_case`.
 
-Utilize nomes de tabelas e colunas sempre em inglês e no plural e em snake_case
+For primary and foreign keys, always use the singular table name followed by `_id`, for example: `users -> user_id`, `customers -> customer_id`, `orders -> order_id`, `payments -> payment_id`.
 
-Para chaves primárias e estrangeiras, sempre utilize o nome da tabela no singular seguido por _id, por exemplo: users -> user_id, customers -> customer_id, orders -> order_id, payments -> payment_id
+Use uppercase for reserved words, for example `SELECT`, `FROM`, `JOIN`, `WHERE`.
 
-Use uppercase para as palavras-reservadas, por exemplo SELECT, FROM, JOIN, WHERE
+Always use `JOIN` instead of selecting tables separately and combining them in the `WHERE` clause.
 
-Sempre utilize join ao invés de selecionar as tabelas e fazer a junção na cláusula where
+If possible, prefer joining with `USING` instead of `ON`.
 
-Se possível, faça o join com using on invés de on
+Never use `*` in a `SELECT`. Always make it explicit which columns are being returned.
 
-Nunca utilize * no select, sempre deixe claro quais são as colunas que estão sendo retornadas
+For string types, always use `text`; do not use `varchar`.
 
-Para os tipos string, sempre adote text, não utilize varchar
+For numeric types, use `int` or `numeric` depending on whether floating-point values are needed.
 
-Para os tipos numéricos, utilize int ou numeric dependendo se tem ponto flutuante
+For dates, use the `timestamptz` type.
 
-Para datas utilize o tipo timestamptz
+When a column will be used for searches, create an index.
 
-Quando uma coluna for utilizada como busca, crie index
+Whenever possible, solve grouping or sorting concerns directly in the query with `GROUP BY` and `ORDER BY`.
 
-Sempre que possível, resolva questões de agrupamento ou ordem na própria query com group by e order by
+If you use `ORDER BY`, always indicate whether the order is `DESC` or `ASC`.
 
-Se utilizar order by, sempre indique se a ordem é desc ou asc
+Always use prepared statements and never interpolate strings into queries.
 
-Sempre utilize prepared statement e não interpole strings em queries
+When it makes sense, prefer `IN` and `BETWEEN` instead of combinations using `AND` and `OR`.
 
-Quando fizer sentido, dê preferência para in e between ao invés de combinações com and e or
+Break lines after `SELECT`, `FROM`, `WHERE`, `GROUP BY`, and `ORDER BY`.
 
-Quebre as linhas após SELECT, FROM, WHERE, GROUP BY, ORDER BY
+Use constraints such as `NOT NULL` whenever they make sense and are aligned with the application behavior.
 
-Utilize constraints como NOT NULL sempre que fizer sentido, alinhado com o que estiver sendo feito na aplicação
+Every table must have `created_at` and `updated_at`.
 
-Toda tabela deve ter created_at, updated_at
-
-Sempre que fizer qualquer modificação no banco de dados, crie uma migration para aplicar e outra para desfazer caso necessário
+Whenever you make any database change, create one migration to apply it and another to roll it back if necessary.

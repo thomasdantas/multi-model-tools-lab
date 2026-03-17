@@ -1,30 +1,29 @@
-
 React
 
-Utilize componentes funcionais, nunca classes
+Use functional components, never class components.
 
-Utilize TypeScript e a extensão .tsx para os componentes
+Use TypeScript and the `.tsx` extension for components.
 
-Mantenha o estado do componente o mais próximo possível de onde ele será usado
+Keep component state as close as possible to where it will be used.
 
-Passe propriedades de forma explícita entre componentes, evite spread operator como <ComponentName ...props />
+Pass props explicitly between components. Avoid the spread operator such as `<ComponentName {...props} />`.
 
-Evite componentes muito grandes, acima de 300 linhas
+Avoid very large components, especially those over 300 lines.
 
-Utilize Context API quando precisar se comunicar entre diferentes componentes filhos
+Use the Context API when you need to communicate across different child components.
 
-Utilize Tailwind para fazer a estilização dos componentes, não utilize styled-components
+Use Tailwind to style components. Do not use `styled-components`.
 
-Evite o excesso de componentes pequenos
+Avoid an excessive number of very small components.
 
-Sempre utilize React Query para se comunicar com a API
+Always use React Query to communicate with the API.
 
-Utilize o hook useMemo para evitar o excesso de cálculos e interações desnecessárias entre renderizações
+Use the `useMemo` hook to avoid excessive calculations and unnecessary interactions between renders.
 
-Nomeie os hooks com "use", por exemplo: useAuth, useLocalStorage, useUrl
+Name hooks with the `use` prefix, for example: `useAuth`, `useLocalStorage`, `useUrl`.
 
-Utilize componentes do Shadcn UI sempre que possível
+Use Shadcn UI components whenever possible.
 
-Antes de criar um componente novo complexo, pergunte antes se deve buscar uma biblioteca existente
+Before creating a new complex component, ask whether an existing library should be used instead.
 
-Crie testes automatizados para todos os componentes
+Create automated tests for all components.

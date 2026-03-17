@@ -1,40 +1,39 @@
-
 REST/HTTP
 
-Utilize express para mapear os endpoints
+Use `express` to map endpoints.
 
-Utilize o padrão REST para consultas, mantendo o nome dos recursos em inglês e no plural, permitindo a navegabilidade em recursos alinhados, por exemplo: /playlists/:playlistId/videos ou /customers/:customerId/invoices
+Use the REST pattern for queries, keeping resource names in English and pluralized to allow navigation through related resources, for example: `/playlists/:playlistId/videos` or `/customers/:customerId/invoices`.
 
-Recursos e verbos compostos devem usar kebab-case, por exemplo: scheduled-events ou process-payment
+Resources and compound verbs must use `kebab-case`, for example: `scheduled-events` or `process-payment`.
 
-Evite criar endpoints com mais de 3 recursos, por exemplo: /channels/:channelId/playlists/:playlistId/videos/:videoId/comments
+Avoid creating endpoints with more than 3 resources, for example: `/channels/:channelId/playlists/:playlistId/videos/:videoId/comments`.
 
-Para mutações não siga REST à risca, utilize uma combinação de REST para navegar nos recursos e verbos para representar ação que estão sendo executadas, sempre com POST, por exemplo: /users/:userId/change_password evitando PUT /users/:userId
+For mutations, do not follow REST too rigidly. Use a combination of REST to navigate resources and verbs to represent the action being executed, always with `POST`, for example: `/users/:userId/change_password`, avoiding `PUT /users/:userId`.
 
-O formato do payload de requisição e resposta deve ser sempre JSON, salvo que especificado algum diferente
+The request and response payload format must always be JSON, unless a different format is explicitly specified.
 
-Sempre siga as regras de segurança, validando a autenticação e autorização
+Always follow security rules by validating authentication and authorization.
 
-Tipos de retorno:
+Return types:
 
-Retorne 200 quando for bem sucedido
+Return `200` when successful.
 
-Retorne 404 se um recurso não for encontrado
+Return `404` if a resource is not found.
 
-Retorne 500 se for um erro inesperado
+Return `500` for unexpected errors.
 
-Retorne 422 se for um erro de negócio
+Return `422` for business-rule errors.
 
-Retorne 400 se a requisição não estiver bem formatada
+Return `400` if the request is malformed.
 
-Retorne 401 se o usuário não estiver autenticado
+Return `401` if the user is not authenticated.
 
-Retorne 403 se o usuário não estiver autorizado
+Return `403` if the user is not authorized.
 
-Documente os endpoints, methods, status code para cada endpoint utilizando OpenAPI
+Document endpoints, methods, and status codes for each endpoint using OpenAPI.
 
-Implemente paginação para as consultas mais complexas, baseado em limit e offset passados por meio da query string
+Implement pagination for more complex queries based on `limit` and `offset` passed through the query string.
 
-Implemente partial response para consultas que retornam grandes quantidade de dados
+Implement partial responses for queries that return large amounts of data.
 
-Utilize axios para fazer chamadas para api externa
+Use `axios` to make calls to external APIs.
